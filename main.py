@@ -1,8 +1,6 @@
 import nltk
 import csv
 from constants import WORDS_TO_IGNORE, ATTRS_TO_CAPTURE
-from request import get_search_response
-from pprint import pprint
 
 
 def write_data_from_csv_to_dict():
