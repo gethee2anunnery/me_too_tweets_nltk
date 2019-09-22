@@ -11,8 +11,8 @@ def write_data_from_csv_to_dict():
 		csv_reader = csv.DictReader(file_data)
 		for row in csv_reader:
 			row_attrs = dict()
-			# counts = get_word_counts_from_text(row['text'])
-			# row_attrs['word_counts'] = counts
+			counts = get_word_counts_from_text(row['text'])
+			row_attrs['word_counts'] = counts
 			for k, v in row.items():
 				if k in ATTRS_TO_CAPTURE:
 					row_attrs[k] = row[k]
