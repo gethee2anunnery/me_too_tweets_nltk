@@ -6,10 +6,6 @@ from pprint import pprint
 
 
 def write_data_from_csv_to_dict():
-	response = get_search_response()
-
-	for x in response.json()['statuses']:
-		print(x['text'] + '\n')
 	data = list()
 	with open("metootweets.csv", 'rU') as file_data:
 		csv_reader = csv.DictReader(file_data)
@@ -33,6 +29,7 @@ def get_word_counts_from_text(row_text):
 		for k, v in freq.items():
 			if k and k not in WORDS_TO_IGNORE:
 				word_counts[k] = v
+		print word_counts
 		return word_counts
 
 
